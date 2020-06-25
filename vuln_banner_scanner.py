@@ -2,7 +2,6 @@
 
 import argparse
 import socket
-import os
 
 def ret_banner(ip, port):
 	try:
