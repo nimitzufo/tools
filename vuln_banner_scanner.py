@@ -36,7 +36,7 @@ def main(b_file, _ip):
 if __name__=='__main__':
 	parser = argparse.ArgumentParser(description='A vulnerability scanner that connectos to a TCP socket and reads the banner from a service', usage='vuln_banner_scanner.py BANNER_FILE IP_SCOPE')
 	parser.add_argument('banner_file', metavar='BANNER_FILE', help='Enter the file containing vulnerable banners')
-	parser.add_argument('ip_scope', metavar='IP_SCOPE', help='Type the target IPv4 address --only the first 3 bytes, or octets')
+	parser.add_argument('ip_scope', metavar='IP_SCOPE', help='Type the target IPv4 address --only the first 3 bytes, or octets of the dotted quad notation')
 	args = parser.parse_args()
 	print(f'Running \'{__file__}\'')
 	main(args.banner_file, args.ip_scope)
