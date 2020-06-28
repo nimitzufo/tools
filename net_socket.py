@@ -11,7 +11,7 @@ s.listen(1)
 print("Server started, waiting for connections... ")
 connection, address = s.accept()
 
-print("Client connected with address: ", address)
+print(f'Client connected with address: {address}')
 
 while 1:
 	data = connection.recv(1024)
