@@ -25,7 +25,7 @@ def port_scan(_host, _ports):
 		
 def full_connect_scan(host, port):
 	screen_lock = threading.Semaphore() #instance of Semaphore
-	with socket.socket(socket.AF_INET. socket.SOCK_STREAM) as conn_socket:
+	with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as conn_socket:
 		try:
 			conn_socket.connect((host, port))
 			conn_socket.send(b'gibberish_jibber-jabber_gobbledygook\r\n')
@@ -53,4 +53,4 @@ if __name__ == '__main__':
 	                    ' port[s] separated by comma -- no spaces in between')
 	args = parser.parse_args()
 	args.tgt_ports = str(args.p).split(',')
-	port_scan(tgt_host, tgt_ports)
+	port_scan(args.tgt_host, args.tgt_ports)
